@@ -14,7 +14,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Android',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/logo_android.svg').default,
     link: 'android/intro',
     description: (
       <>
@@ -25,7 +25,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Flutter',
     link: 'flutter/intro',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/logo_flutter.svg').default,
     description: (
       <>
         É um framework da Google criado para facilitar o desenvolvimento de aplicativos nativos com uma única base de código para Android e iOS.
@@ -34,8 +34,8 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Kotlin Multiplataforma',
-    link: 'kmm/intro',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    link: '',
+    Svg: require('@site/static/img/logo_kotlin.svg').default,
     description: (
       <>
         Permite compartilhar lógica entre plataformas como Android, iOS e web, acelerando o desenvolvimento com código reutilizável.
@@ -48,7 +48,7 @@ function Feature({ title, Svg, description, link }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <Svg className={styles.featureSvg} style={{ padding: '24px' }} role="img" />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
