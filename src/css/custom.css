@@ -37,6 +37,10 @@
 :root[data-theme='dark'] {
   --ifm-background-color: #191e20; /* cor de fundo desejada */
   --ifm-color-primary-dark: #bb86fc; /* exemplo, muda cor primária no dark */
+  .hero--primary {
+    background-color: #242526; /* Altere para a cor desejada */
+    color: #ffffff;           /* Cor do texto, se necessário */
+  }
 }
 
 body {
@@ -45,4 +49,9 @@ body {
 
 .footer {
   margin-top: 10px;
+}
+
+.footer {
+  justify-content: flex-end !important;
+  text-align: center;
 }

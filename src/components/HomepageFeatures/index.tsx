@@ -1,48 +1,50 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import Link from '@docusaurus/Link';
 
 type FeatureItem = {
   title: string;
+  link: string,
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Android',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    link: 'android/intro',
+    description: (
+      <>
+        É a plataforma mais usada no mundo para apps móveis, oferecendo flexibilidade, desempenho e suporte a milhões de dispositivos.
+      </>
+    ),
+  },
+  {
+    title: 'Flutter',
+    link: 'flutter/intro',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        É um framework da Google criado para facilitar o desenvolvimento de aplicativos nativos com uma única base de código para Android e iOS.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
+    title: 'Kotlin Multiplataforma',
+    link: 'kmm/intro',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Permite compartilhar lógica entre plataformas como Android, iOS e web, acelerando o desenvolvimento com código reutilizável.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description, link }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -51,6 +53,9 @@ function Feature({title, Svg, description}: FeatureItem) {
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
+      </div>
+      <div className="text--center padding-horiz--md">
+        <Link to={link}>Saiba mais</Link>
       </div>
     </div>
   );
