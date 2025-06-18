@@ -55,3 +55,39 @@ body {
   justify-content: flex-end !important;
   text-align: center;
 }
+
+.custom-hero-banner {
+  background-image: url('/img/logo_eu_com_background.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px; /* ajuste a altura conforme necessário */
+}
+
+
+.custom-hero-banner {
+  min-height: 500px;
+  display: flex;
+  align-items: center; /* para centralizar o conteúdo verticalmente */
+  background-size: cover;
+  background-position: center;
+}
+
+.hero__title {
+  margin-top: 100px;
+  margin-left: 35px;
+}
+
+.hero__subtitle {
+  margin-left: 35px;
+}
+
+.only-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .only-desktop {
+    display: block;
+  }
+}

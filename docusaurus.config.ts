@@ -93,8 +93,8 @@ const config: Config = {
     navbar: {
       title: "Heider Lopes",
       logo: {
-        alt: "My Site Logo",
-        src: "img/logo.svg",
+        alt: "Logo do site",
+        src: "img/logo_cartoon_tablet.png",
       },
       items: [
         { to: "/android/intro", label: "Android", position: "left" },
